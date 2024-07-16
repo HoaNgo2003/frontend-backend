@@ -1,0 +1,55 @@
+*{
+  box-sizing: border-box;
+}
+.container{
+  width: calc(100% - 280px);
+  padding: 20px 50px;
+  flex-direction: column;
+}
+.table{
+  width: 100%;
+  margin-top: 15px
+}
+table, tr, th, td{
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+tr{
+  height: 40px;
+  text-align: center;
+}
+.heading{
+  text-align: center;
+}
+.control{
+  display: flex;
+  gap:15px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.control span{
+  cursor: pointer;
+}
+.red{
+  background: #F8373C;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.green, .new-video{
+  background: #24A528;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.yellow{
+  background:orange;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+ 
+.new-video{
+  cursor: pointer;
+}

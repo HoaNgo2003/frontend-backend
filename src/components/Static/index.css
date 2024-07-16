@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;
+}
+ 
+.container-1 {
+  margin : 50px;
+  display: flex;
+  gap:30px;
+  font-size: 16px;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  
+}
+.row-1{
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+.row-1 span{
+  text-align: left;
+}
+input{
+  border: 1 px solid;
+  padding: 10px 5px;
+  font-size: 14px;
+  outline: none;
+}
+.btn-search{
+  background: #24A528;
+  outline: none;
+  padding: 12px;
+  border: none;
+  color: antiquewhite;
+  cursor: pointer;
+}
+.table-1{
+  width: 75%;
+  
+}
+.table-contain{
+  display: flex;
+  width: 75%;
+  
+  align-items: center;
+  justify-content: center;
+}

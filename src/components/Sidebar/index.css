@@ -1,0 +1,28 @@
+.sider{
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  background-color: #263544;
+  color: aliceblue;
+}
+.row{
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  padding: 10px 45px;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+.row:hover{
+  background-color: #1D2531;
+}
+.row .icon{
+  margin-right: 10px;
+}
+.row.down{
+  /* margin-top: 250px; */
+  color: #F8373C;
+}
