@@ -4,7 +4,7 @@ import { CREATE_VIDEO_FAILURE, CREATE_VIDEO_REQUEST, CREATE_VIDEO_SUCCESS, DELET
 export const getAllVideo = (query)=>async(dispatch)=>{
   dispatch({type: FIND_VIDEO_REQUEST})
   try {
-    const {data} = await api.get(`${API_BASE_URL}?keyword=${query}`)
+    const {data} = await api.get(`${API_BASE_URL}/video`)
     dispatch({type:FIND_VIDEO_SUCESS, payload: data})
   } catch (error) {
     dispatch({type:FIND_VIDEO_FAILURE, payload: error})

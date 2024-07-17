@@ -8,8 +8,11 @@ export const register = (reqData)=> async(dispatch)=>{
   dispatch({type: REGISTER_REQUEST})
   try {
     const {data} = await api.post(`${API_BASE_URL}/auth/signup`, reqData);
+    console.log(data.token)
+    if(data.token){
+      localStorage.setItem("jwt", data.token)
+    }
     dispatch({type: REGISTER_SUCCESS, payload: data})
-
   } catch (error) {
     dispatch({type: REGISTER_FAILURE, payload: error})
 
@@ -19,6 +22,9 @@ export const login = (reqData)=> async(dispatch)=>{
   dispatch({type: LOGIN_REQUEST})
   try {
     const {data} = await api.post(`${API_BASE_URL}/auth/login`, reqData)
+    if(data.token){
+      localStorage.setItem("jwt", data.token)
+    }
     dispatch({type: LOGIN_SUCCESS, payload: data})
   } catch (error) {
     dispatch({type: LOGIN_FAILURE, payload: error})

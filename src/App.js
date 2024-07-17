@@ -1,7 +1,7 @@
 import './App.css';
 import LayoutDefault from './layouts/LayoutDefault';
 import Home from './components/Home/Home.jsx';
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Routes } from 'react-router-dom';
 import Crud from './components/Home/Crud.jsx';
 import Static from './components/Static/index.jsx';
 import Login from './components/clients/Login/index.jsx';
@@ -32,8 +32,19 @@ const router = createBrowserRouter(
 function App() {
   return (
     <>
-    
-      <RouterProvider router={true?router:routerLogin}/>
+    <Routes>
+      <Route path='/login' element={<SignUp/>}/>
+      <Route index path='/' element={<Login/>}/>
+      <Route path="/admin" element={<LayoutDefault />}>
+        <Route
+          path="crud"
+          element={<Crud />}
+        />
+        <Route path="static" element={<Static/>} />
+        <Route path="home" element={<Home/>} />
+      </Route>
+    </Routes>
+ 
     </>
   );
 }
